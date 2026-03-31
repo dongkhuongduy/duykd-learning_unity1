@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -14,22 +15,28 @@ public class Bai2 : MonoBehaviour
     string Bai1ten = "Duy";
     int[] numbers = { 1, 2, 3 };
 
+    public int sum(int a, int b)
+    {
+        return a + b;
+     }
+    public int hieu(int a, int b)
+    {
+        return a - b;
+    }
+    public int nhan(int a, int b)
+    {
+        return a * b;
+    }
+    public float chia(int a, int b)
+    {
+        return (float)a / b;
+    }
     void Start()
     {
-        int tong = a + b;
-
-        Debug.Log("tong a + b: " + tong);
-
-        int hieu = a - b;
-        
-        Debug.Log("hieu a - b: " + hieu);
-
-        int nhan = a * b;
-        
-        Debug.Log("tich cua a va b:" + nhan);
-
-        int thuong = b / a;
-        Debug.Log("thuong cua a va b: " +  thuong);
+        Debug.Log(sum(a,b));
+        Debug.Log(chia(a,b));
+        Debug.Log(nhan(a,b));
+        Debug.Log(hieu(a,b));
 
     }
 

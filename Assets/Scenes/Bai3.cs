@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,27 +14,14 @@ public class Bai3 : MonoBehaviour
     bool e = true;
     string Bai1ten = "Duy";
     int[] numbers = { 1, 2, 3 };
-
-public void AddMoney()
+    int luong = 200;
+public int Cong1(int a)
     {
-        int tong = a + b;
-
-        Debug.Log("tong a + b: " + tong);
-
-        int hieu = a - b;
-
-        Debug.Log("hieu a - b: " + hieu);
-
-        int nhan = a * b;
-
-        Debug.Log("tich cua a va b:" + nhan);
-
-        int thuong = b / a;
-        Debug.Log("thuong cua a va b: " + thuong);
+        return a + 1;
     }
     void Start()
     {
-     AddMoney();
+        Debug.Log(Cong1(a));
 
     }
 

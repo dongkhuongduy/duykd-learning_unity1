@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bai1 : MonoBehaviour
@@ -13,7 +12,15 @@ public class Bai1 : MonoBehaviour
     bool e = true;
     string Bai1ten = "Duy";
     int[] numbers = { 1, 2, 3 };
-    
+
+    public Person person1 = new Person();
+    public Person person2 = new Person();
+
+    public float TongLuong(Person p1, Person p2)
+    {
+        return p1.luong + p2.luong;
+    }
+
     void Start()
     {
         Debug.Log(a);
@@ -23,16 +30,27 @@ public class Bai1 : MonoBehaviour
         Debug.Log(y);
         Debug.Log(monney);
         Debug.Log(letter);
-        Debug.Log(name);
         Debug.Log(e);
         Debug.Log(Bai1ten);
-        Debug.Log(numbers);
+
        
+        person1.ten = "Duy";
+        person1.age = 22;
+        person1.diachi = "HaNoi";
+        person1.luong = 10.0f;
+        person1.nyc = 2;
+
+        person2.ten = "Chi";
+        person2.age = 25;
+        person2.diachi = "Nghe An";
+        person2.luong = 12.5f;
+        person2.nyc = 1;
+
+        Debug.Log("Tong luong: " + TongLuong(person1, person2));
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
